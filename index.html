@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEANOR — Paper Father</title>
+  <style>
+    /* Основные стили минималистичного сайта */
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background: #0a0a0a;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header.hero {
+      position: relative;
+      text-align: center;
+      padding: 120px 20px;
+      background: url('assets/hero.jpg') center/cover no-repeat;
+      color: #fff;
+    }
+
+    header.hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+
+    header.hero h1, header.hero p, header.hero a {
+      position: relative;
+      z-index: 1;
+    }
+
+    header.hero h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+
+    header.hero p {
+      font-size: 1.2em;
+      margin-bottom: 1.5em;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header.hero .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background: #f5f5f5;
+      color: #0a0a0a;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    header.hero .btn:hover {
+      background: #e0e0e0;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    section p {
+      font-size: 1em;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .grid img {
+      width: 200px;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+
+    footer a {
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero section -->
+  <header class="hero">
+    <h1>MEANOR</h1>
+    <p>Dark Pop / Alt-Pop artist exploring emotional absence, longing, and healing. Breakthrough single "Paper Father" turned her into a voice for those dealing with father issues.</p>
+    <a href="#music" class="btn">Listen</a>
+  </header>
+
+  <!-- About section -->
+  <section id="about">
+    <h2>About MEANOR</h2>
+    <p>
+      MEANOR is a young, mysterious artist whose music speaks louder than words. Her main hit "Paper Father" is an intimate confession about a father who gave gifts but not love. The "paper father" metaphor represents a fragile, nominal presence that cannot protect or support. Through her music, MEANOR turns personal pain into art, exploring the journey from longing to self-healing.
+    </p>
+  </section>
+
+  <!-- Music section -->
+  <section id="music">
+    <h2>Music</h2>
+    <p>Discover her breakthrough track:</p>
+    <iframe src="https://open.spotify.com/embed/track/..." width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  </section>
+
+  <!-- Gallery section -->
+  <section id="visuals">
+    <h2>Gallery</h2>
+    <div class="grid">
+      <img src="assets/photo1.jpg" alt="MEANOR cinematic image 1">
+      <img src="assets/photo2.jpg" alt="MEANOR cinematic image 2">
+      <img src="assets/photo3.jpg" alt="MEANOR cinematic image 3">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Follow MEANOR on social media:</p>
+    <p>
+      <a href="https://instagram.com/meanor" target="_blank">Instagram</a> | 
+      <a href="https://soundcloud.com/meanor" target="_blank">SoundCloud</a> | 
+      <a href="https://twitter.com/meanor" target="_blank">Twitter</a>
+    </p>
+    <p>© 2026 MEANOR</p>
+  </footer>
+
+</body>
+</html>
