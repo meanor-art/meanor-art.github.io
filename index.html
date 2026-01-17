@@ -12,17 +12,29 @@ body{font-family:'Montserrat',sans-serif;color:#fff;background:#0b0b0b;overflow:
 
 /* --- Hero --- */
 #hero{
+    position: relative;
     height:100vh;
     width:100%;
-    background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.85)), url('back.png') center/cover no-repeat;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
-    position:relative;
     overflow:hidden;
     perspective:1000px;
+}
+
+/* --- Video background --- */
+#hero video{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transform:translate(-50%,-50%);
+    z-index:0;
+    opacity:0.6;
 }
 
 /* --- Avatar --- */
@@ -36,6 +48,7 @@ body{font-family:'Montserrat',sans-serif;color:#fff;background:#0b0b0b;overflow:
     transform:translateY(-20px);
     animation: fadeUp 0.8s forwards 0.2s;
     transition: transform 0.15s ease-out;
+    z-index:1;
 }
 
 /* --- Particles --- */
@@ -65,6 +78,7 @@ body{font-family:'Montserrat',sans-serif;color:#fff;background:#0b0b0b;overflow:
     transform:translateY(20px);
     animation: fadeUp 1s forwards 0.5s;
     transition: transform 0.15s ease-out;
+    z-index:1;
 }
 #hero p{
     font-size:1.2rem;
@@ -73,6 +87,7 @@ body{font-family:'Montserrat',sans-serif;color:#fff;background:#0b0b0b;overflow:
     transform:translateY(20px);
     animation: fadeUp 1s forwards 0.7s;
     transition: transform 0.15s ease-out;
+    z-index:1;
 }
 
 /* --- Social Icons --- */
@@ -81,6 +96,7 @@ body{font-family:'Montserrat',sans-serif;color:#fff;background:#0b0b0b;overflow:
     gap:20px;
     justify-content:center;
     margin-top:20px;
+    z-index:1;
 }
 #social-hero a img{
     width:45px;height:45px;
@@ -102,6 +118,7 @@ body{font-family:'Montserrat',sans-serif;color:#fff;background:#0b0b0b;overflow:
     color:#ccc;
     text-align:center;
     transition: transform 0.1s ease-out;
+    z-index:1;
 }
 
 /* --- Animations --- */
@@ -113,11 +130,19 @@ body{font-family:'Montserrat',sans-serif;color:#fff;background:#0b0b0b;overflow:
 <body>
 
 <section id="hero">
+    <!-- Background video -->
+    <video autoplay muted loop playsinline>
+        <source src="back.mp4" type="video/mp4">
+    </video>
+
+    <!-- Avatar -->
     <img id="avatar" src="avatar.jpeg" alt="MEANOR Avatar">
 
+    <!-- Header -->
     <h1>meanor</h1>
     <p>Dark Pop · Alt-Pop — Intimate storytelling & cinematic soundscapes inspired by "Paper Father"</p>
     
+    <!-- Social links -->
     <div id="social-hero">
         <a href="https://open.spotify.com/artist/your-spotify-id" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/spotify.svg" alt="Spotify"></a>
         <a href="https://music.apple.com/us/artist/meanor/your-apple-id" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/applemusic.svg" alt="Apple Music"></a>
@@ -128,6 +153,7 @@ body{font-family:'Montserrat',sans-serif;color:#fff;background:#0b0b0b;overflow:
         <a href="https://genius.com/artists/Meanor" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/genius.svg" alt="Genius"></a>
     </div>
 
+    <!-- Footer -->
     <div id="hero-footer">© 2026 MEANOR. All rights reserved.</div>
 </section>
 
